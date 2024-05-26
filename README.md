@@ -8,7 +8,7 @@ Doctrine Extensions
 [![Monthly Downloads](https://poser.pugx.org/nucleos/doctrine-extensions/d/monthly)](https://packagist.org/packages/nucleos/doctrine-extensions)
 [![Daily Downloads](https://poser.pugx.org/nucleos/doctrine-extensions/d/daily)](https://packagist.org/packages/nucleos/doctrine-extensions)
 
-[![Continuous Integration](https://github.com/nucleos/nucleos-doctrine-extensions/workflows/Continuous%20Integration/badge.svg?event=push)](https://github.com/nucleos/nucleos-doctrine-extensions/actions?query=workflow%3A"Continuous+Integration"+event%3Apush)
+[![Continuous Integration](https://github.com/nucleos/nucleos-doctrine-extensions/actions/workflows/continuous-integration.yml/badge.svg?event=push)](https://github.com/nucleos/nucleos-doctrine-extensions/actions?query=workflow%3A"Continuous+Integration"+event%3Apush)
 [![Code Coverage](https://codecov.io/gh/nucleos/nucleos-doctrine-extensions/graph/badge.svg)](https://codecov.io/gh/nucleos/nucleos-doctrine-extensions)
 [![Type Coverage](https://shepherd.dev/github/nucleos/nucleos-doctrine-extensions/coverage.svg)](https://shepherd.dev/github/nucleos/nucleos-doctrine-extensions)
 
