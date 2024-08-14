@@ -2,27 +2,28 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
-## 4.15.0 - TBD
+## 4.15.0 - 2024-08-14
 
-### Added
 
-- Nothing.
+-----
 
-### Changed
+### Release Notes for [4.15.0](https://github.com/nucleos/nucleos-doctrine-extensions/milestone/31)
 
-- Nothing.
+Feature release (minor)
 
-### Deprecated
+### 4.15.0
 
-- Nothing.
+- Total issues resolved: **0**
+- Total pull requests resolved: **2**
+- Total contributors: **2**
 
-### Removed
+#### Enhancement
 
-- Nothing.
+ - [409: Fix symfony deprecation](https://github.com/nucleos/nucleos-doctrine-extensions/pull/409) thanks to @core23
 
-### Fixed
+#### dependency
 
-- Nothing.
+ - [406: Update dependency psalm/plugin-phpunit to ^0.19.0](https://github.com/nucleos/nucleos-doctrine-extensions/pull/406) thanks to @renovate[bot]
 
 ## 4.14.0 - 2024-02-05
 
