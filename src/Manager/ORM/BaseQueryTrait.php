@@ -50,7 +50,7 @@ trait BaseQueryTrait
         $fieldSpl = explode('.', $field);
 
         if (\count($fieldSpl) > 2) {
-            throw new InvalidArgumentException(sprintf('The fieldname "%s" cannot contain more than one dot', $field));
+            throw new InvalidArgumentException(\sprintf('The fieldname "%s" cannot contain more than one dot', $field));
         }
 
         // Map entity to table name

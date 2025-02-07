@@ -31,7 +31,7 @@ final class SortableListener implements EventSubscriber
 {
     private PropertyAccessor $propertyAccessor;
 
-    public function __construct(PropertyAccessor $propertyAccessor = null)
+    public function __construct(?PropertyAccessor $propertyAccessor = null)
     {
         if (null === $propertyAccessor) {
             $propertyAccessor = PropertyAccess::createPropertyAccessor();
@@ -175,7 +175,7 @@ final class SortableListener implements EventSubscriber
         return 0;
     }
 
-    private function addGroupFilter(QueryBuilder $qb, PositionAwareInterface $entity, UnitOfWork $uow = null): void
+    private function addGroupFilter(QueryBuilder $qb, PositionAwareInterface $entity, ?UnitOfWork $uow = null): void
     {
         foreach ($entity->getPositionGroup() as $field) {
             $value = $this->propertyAccessor->getValue($entity, $field);

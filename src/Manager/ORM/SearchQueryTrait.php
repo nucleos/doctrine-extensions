@@ -29,7 +29,7 @@ trait SearchQueryTrait
     {
         $orx = $qb->expr()->orX();
         foreach ($values as $index => $word) {
-            $orx->add(sprintf('%s = :name'.$index, $field));
+            $orx->add(\sprintf('%s = :name'.$index, $field));
             $qb->setParameter('name'.$index, $word);
 
             if (!$strict) {
@@ -42,9 +42,9 @@ trait SearchQueryTrait
 
     private function buildLikeExpressions(QueryBuilder $qb, Orx $orx, string $field, string $word, int $index): void
     {
-        $orx->add(sprintf('%s LIKE :name'.$index.'_any', $field));
-        $orx->add(sprintf('%s LIKE :name'.$index.'_pre', $field));
-        $orx->add(sprintf('%s LIKE :name'.$index.'_suf', $field));
+        $orx->add(\sprintf('%s LIKE :name'.$index.'_any', $field));
+        $orx->add(\sprintf('%s LIKE :name'.$index.'_pre', $field));
+        $orx->add(\sprintf('%s LIKE :name'.$index.'_suf', $field));
 
         $qb->setParameter('name'.$index.'_any', '% '.$word.' %');
         $qb->setParameter('name'.$index.'_pre', '% '.$word);

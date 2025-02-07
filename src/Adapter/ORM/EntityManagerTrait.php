@@ -22,7 +22,7 @@ trait EntityManagerTrait
     /**
      * Creates a new QueryBuilder instance that is prepopulated for this entity name.
      */
-    final protected function createQueryBuilder(string $alias, string $indexBy = null): QueryBuilder
+    final protected function createQueryBuilder(string $alias, ?string $indexBy = null): QueryBuilder
     {
         return $this->getRepository()
             ->createQueryBuilder($alias, $indexBy)

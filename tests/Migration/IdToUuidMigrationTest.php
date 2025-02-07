@@ -10,6 +10,7 @@
 namespace Nucleos\Doctrine\Tests\Migration;
 
 use Doctrine\DBAL\Connection;
+use Doctrine\DBAL\Exception;
 use Doctrine\DBAL\Schema\Schema;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\Persistence\AbstractManagerRegistry;
@@ -100,7 +101,7 @@ final class IdToUuidMigrationTest extends KernelTestCase
     }
 
     /**
-     * @throws \Doctrine\DBAL\Exception
+     * @throws Exception
      */
     private function insertData(Connection $connection): void
     {

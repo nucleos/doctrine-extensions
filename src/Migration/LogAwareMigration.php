@@ -17,17 +17,17 @@ trait LogAwareMigration
 
     protected function section(string $message): void
     {
-        $this->writeLn(sprintf('%s', $message));
+        $this->writeLn(\sprintf('%s', $message));
     }
 
     protected function info(string $message): void
     {
-        $this->writeLn(sprintf('-> %s', $message));
+        $this->writeLn(\sprintf('-> %s', $message));
     }
 
     protected function debug(string $message): void
     {
-        $this->writeLn(sprintf('  * %s', $message));
+        $this->writeLn(\sprintf('  * %s', $message));
     }
 
     protected function writeLn(string $message): void

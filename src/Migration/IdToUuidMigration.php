@@ -87,9 +87,9 @@ final class IdToUuidMigration implements LoggerAwareInterface
     /**
      * @param callable(mixed $id, string $uuid): void|null $callback
      */
-    public function migrate(string $tableName, string $idField = 'id', callable $callback = null): void
+    public function migrate(string $tableName, string $idField = 'id', ?callable $callback = null): void
     {
-        $this->section(sprintf('Migrating %s.%s field to UUID', $tableName, $idField));
+        $this->section(\sprintf('Migrating %s.%s field to UUID', $tableName, $idField));
 
         $this->table       = $tableName;
         $this->idField     = $idField;
@@ -237,7 +237,7 @@ final class IdToUuidMigration implements LoggerAwareInterface
     {
         $this->idToUuidMap = [];
 
-        $fetchs = $this->connection->fetchAllAssociative(sprintf('SELECT %s from %s', $this->idField, $this->table));
+        $fetchs = $this->connection->fetchAllAssociative(\sprintf('SELECT %s from %s', $this->idField, $this->table));
 
         if (0 === \count($fetchs)) {
             return;
@@ -396,10 +396,10 @@ final class IdToUuidMigration implements LoggerAwareInterface
     {
         $this->section('Copy UUIDs to recreated ids fields');
 
-        $this->connection->executeQuery(sprintf('UPDATE %s SET %s = %s', $this->table, $this->idField, self::UUID_FIELD));
+        $this->connection->executeQuery(\sprintf('UPDATE %s SET %s = %s', $this->table, $this->idField, self::UUID_FIELD));
 
         foreach ($this->foreignKeys as $foreignKey) {
-            $this->connection->executeQuery(sprintf('UPDATE %s SET %s = %s', $foreignKey['table'], $foreignKey['key'], $foreignKey['uuid_key']));
+            $this->connection->executeQuery(\sprintf('UPDATE %s SET %s = %s', $foreignKey['table'], $foreignKey['key'], $foreignKey['uuid_key']));
         }
     }
 
