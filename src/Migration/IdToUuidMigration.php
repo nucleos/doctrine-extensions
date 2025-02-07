@@ -25,7 +25,7 @@ use RuntimeException;
 use Symfony\Component\Uid\Uuid;
 
 /**
- * @psalm-type ForeignKey = array{
+ * @phpstan-type ForeignKey = array{
  *     table:       string,
  *     key:         string,
  *     uuid_key:    string,
@@ -34,7 +34,7 @@ use Symfony\Component\Uid\Uuid;
  *     primaryKey:  string[],
  *     onDelete?:   string
  * }
- * @psalm-type Index = array{
+ * @phpstan-type Index = array{
  *     table:   string,
  *     name:    string,
  *     columns: string[],
@@ -58,14 +58,14 @@ final class IdToUuidMigration implements LoggerAwareInterface
     /**
      * @var array<array-key, array<string, mixed>>
      *
-     * @psalm-var array<array-key, ForeignKey>
+     * @phpstan-var array<array-key, ForeignKey>
      */
     private array $foreignKeys = [];
 
     /**
      * @var array<array-key, array<string, mixed>>
      *
-     * @psalm-var array<array-key, Index>
+     * @phpstan-var array<array-key, Index>
      */
     private array $indexes = [];
 
@@ -471,7 +471,7 @@ final class IdToUuidMigration implements LoggerAwareInterface
     }
 
     /**
-     * @psalm-param ForeignKey $foreignKey
+     * @phpstan-param ForeignKey $foreignKey
      */
     private function hasCombinedPrimaryKey(array $foreignKey): bool
     {
