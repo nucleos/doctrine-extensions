@@ -47,7 +47,7 @@ final class LifecycleDateListenerTest extends TestCase
         $object->expects(self::once())->method('setCreatedAt');
         $object->expects(self::once())->method('setUpdatedAt');
 
-        $eventArgs = new PrePersistEventArgs($object, $this->createStub(EntityManagerInterface::class));
+        $eventArgs = new PrePersistEventArgs($object, self::createStub(EntityManagerInterface::class));
 
         $listener = new LifecycleDateListener();
         $listener->prePersist($eventArgs);
@@ -72,7 +72,7 @@ final class LifecycleDateListenerTest extends TestCase
         $changeSet = [];
 
         $listener = new LifecycleDateListener();
-        $listener->preUpdate(new PreUpdateEventArgs($object, $this->createStub(EntityManagerInterface::class), $changeSet));
+        $listener->preUpdate(new PreUpdateEventArgs($object, self::createStub(EntityManagerInterface::class), $changeSet));
     }
 
     public function testPreUpdateForInvalidClass(): void
@@ -197,7 +197,7 @@ final class LifecycleDateListenerTest extends TestCase
         return static function () use ($matcher, $parameters): void {
             $callNumber = $matcher->numberOfInvocations();
 
-            Assert::assertEquals($parameters[$callNumber-1], \func_get_args(), sprintf('Call %s', $callNumber));
+            Assert::assertEquals($parameters[$callNumber-1], \func_get_args(), \sprintf('Call %s', $callNumber));
         };
     }
 }

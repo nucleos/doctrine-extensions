@@ -88,7 +88,7 @@ final class DemoEntityManager
 
         if (!$manager) {
             throw new RuntimeException(
-                sprintf(
+                \sprintf(
                     'Unable to find the mapping information for the class %s.'
                     .' Please check the `auto_mapping` option'
                     .' (http://symfony.com/doc/current/reference/configuration/doctrine.html#configuration-overview)'

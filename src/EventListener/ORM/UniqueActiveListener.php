@@ -29,7 +29,7 @@ final class UniqueActiveListener implements EventSubscriber
 {
     private PropertyAccessor $propertyAccessor;
 
-    public function __construct(PropertyAccessor $propertyAccessor = null)
+    public function __construct(?PropertyAccessor $propertyAccessor = null)
     {
         if (null === $propertyAccessor) {
             $propertyAccessor = PropertyAccess::createPropertyAccessor();
@@ -105,7 +105,7 @@ final class UniqueActiveListener implements EventSubscriber
         ;
 
         foreach ($meta->getIdentifier() as $key) {
-            $qb->andWhere(sprintf('e.%s != :%s', $key, $key))
+            $qb->andWhere(\sprintf('e.%s != :%s', $key, $key))
                 ->setParameter($key, $this->propertyAccessor->getValue($entity, $key))
             ;
         }

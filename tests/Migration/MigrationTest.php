@@ -58,6 +58,6 @@ final class MigrationTest extends KernelTestCase
         $output = new BufferedOutput();
         $status = $application->run(new ArrayInput($arguments), $output);
 
-        self::assertSame(Command::SUCCESS, $status, sprintf('Command "%s" failed', $command));
+        self::assertSame(Command::SUCCESS, $status, \sprintf('Command "%s" failed', $command));
     }
 }
