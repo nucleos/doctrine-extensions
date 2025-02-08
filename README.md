@@ -10,7 +10,6 @@ Doctrine Extensions
 
 [![Continuous Integration](https://github.com/nucleos/nucleos-doctrine-extensions/actions/workflows/continuous-integration.yml/badge.svg?event=push)](https://github.com/nucleos/nucleos-doctrine-extensions/actions?query=workflow%3A"Continuous+Integration"+event%3Apush)
 [![Code Coverage](https://codecov.io/gh/nucleos/nucleos-doctrine-extensions/graph/badge.svg)](https://codecov.io/gh/nucleos/nucleos-doctrine-extensions)
-[![Type Coverage](https://shepherd.dev/github/nucleos/nucleos-doctrine-extensions/coverage.svg)](https://shepherd.dev/github/nucleos/nucleos-doctrine-extensions)
 
 This library provides adds some useful doctrine hooks.
 
