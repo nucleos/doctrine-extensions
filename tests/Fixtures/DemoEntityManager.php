@@ -51,6 +51,9 @@ final class DemoEntityManager
         return $this->createQueryBuilder($alias, $indexBy);
     }
 
+    /**
+     * @param mixed[] $values
+     */
     public function searchWhereQueryBuilder(
         QueryBuilder $qb,
         string $field,
@@ -60,6 +63,10 @@ final class DemoEntityManager
         return $this->searchWhere($qb, $field, $values, $strict);
     }
 
+    /**
+     * @param string[]              $sort
+     * @param array<string, string> $aliasMapping
+     */
     public function addOrderToQueryBuilder(
         QueryBuilder $builder,
         array $sort,
@@ -75,18 +82,14 @@ final class DemoEntityManager
      */
     protected function getRepository(): EntityRepository
     {
-        $objectRepository = $this->getObjectManager()->getRepository($this->class);
-
-        \assert($objectRepository instanceof EntityRepository);
-
-        return $objectRepository;
+        return $this->getObjectManager()->getRepository($this->class);
     }
 
     private function getObjectManager(): ObjectManager
     {
         $manager = $this->registry->getManagerForClass($this->class);
 
-        if (!$manager) {
+        if (null === $manager) {
             throw new RuntimeException(
                 \sprintf(
                     'Unable to find the mapping information for the class %s.'

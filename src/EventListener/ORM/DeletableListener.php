@@ -34,7 +34,7 @@ final class DeletableListener extends AbstractListener
 
         $reflClass = $meta->getReflectionClass();
 
-        if (null === $reflClass || !$reflClass->implementsInterface(DeletableInterface::class)) {
+        if (!$reflClass->implementsInterface(DeletableInterface::class)) {
             return;
         }
 

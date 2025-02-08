@@ -92,7 +92,7 @@ final class SortableListener implements EventSubscriber
 
         $reflClass = $meta->getReflectionClass();
 
-        if (null === $reflClass || !$reflClass->implementsInterface(PositionAwareInterface::class)) {
+        if (!$reflClass->implementsInterface(PositionAwareInterface::class)) {
             return;
         }
 

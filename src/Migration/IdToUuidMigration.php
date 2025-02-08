@@ -477,7 +477,7 @@ final class IdToUuidMigration implements LoggerAwareInterface
     {
         /** @var Column $key */
         foreach ($foreignKey['primaryKey'] as $key) {
-            if ($key === $foreignKey['key']) {
+            if ($key->getName() === $foreignKey['key']) {
                 return true;
             }
         }

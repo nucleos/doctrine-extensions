@@ -54,7 +54,7 @@ final class LifecycleDateListener extends AbstractListener
 
         $reflClass = $meta->getReflectionClass();
 
-        if (null === $reflClass || !$reflClass->implementsInterface(LifecycleDateTimeInterface::class)) {
+        if (!$reflClass->implementsInterface(LifecycleDateTimeInterface::class)) {
             return;
         }
 
