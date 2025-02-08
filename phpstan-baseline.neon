@@ -1,31 +1,6 @@
 parameters:
 	ignoreErrors:
 		-
-			message: "#^Strict comparison using \\=\\=\\= between null and ReflectionClass\\<object\\> will always evaluate to false\\.$#"
-			count: 1
-			path: src/EventListener/ORM/ConfirmableListener.php
-
-		-
-			message: "#^Strict comparison using \\=\\=\\= between null and ReflectionClass\\<object\\> will always evaluate to false\\.$#"
-			count: 1
-			path: src/EventListener/ORM/DeletableListener.php
-
-		-
-			message: "#^Strict comparison using \\=\\=\\= between null and ReflectionClass\\<object\\> will always evaluate to false\\.$#"
-			count: 1
-			path: src/EventListener/ORM/LifecycleDateListener.php
-
-		-
-			message: "#^Strict comparison using \\=\\=\\= between null and ReflectionClass\\<object\\> will always evaluate to false\\.$#"
-			count: 1
-			path: src/EventListener/ORM/SortableListener.php
-
-		-
-			message: "#^Method Nucleos\\\\Doctrine\\\\EventListener\\\\ORM\\\\TablePrefixEventListener\\:\\:addSequenceGenerator\\(\\) has parameter \\$definition with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: src/EventListener/ORM/TablePrefixEventListener.php
-
-		-
 			message: "#^Method Nucleos\\\\Doctrine\\\\EventListener\\\\ORM\\\\TablePrefixEventListener\\:\\:evaluteMapping\\(\\) has parameter \\$mapping with no value type specified in iterable type array\\.$#"
 			count: 1
 			path: src/EventListener/ORM/TablePrefixEventListener.php
@@ -36,24 +11,19 @@ parameters:
 			path: src/EventListener/ORM/TablePrefixEventListener.php
 
 		-
-			message: "#^Parameter \\#1 \\$definition of method Doctrine\\\\ORM\\\\Mapping\\\\ClassMetadataInfo\\<object\\>\\:\\:setSequenceGeneratorDefinition\\(\\) expects array\\{sequenceName\\?\\: string, allocationSize\\?\\: int\\|string, initialValue\\?\\: int\\|string, quoted\\?\\: mixed\\}, array\\{sequenceName\\: string, allocationSize\\: string, initialValue\\: string, quoted\\?\\: mixed\\}\\|array\\{sequenceName\\: string\\}\\|null given\\.$#"
+			message: "#^Parameter \\#1 \\$definition of method Doctrine\\\\ORM\\\\Mapping\\\\ClassMetadata\\<object\\>\\:\\:setSequenceGeneratorDefinition\\(\\) expects array\\{sequenceName\\?\\: string, allocationSize\\?\\: int\\|string, initialValue\\?\\: int\\|string, quoted\\?\\: mixed\\}, array\\{sequenceName\\: string, allocationSize\\: string, initialValue\\: string, quoted\\?\\: mixed\\}\\|array\\{sequenceName\\: string\\}\\|null given\\.$#"
 			count: 1
 			path: src/EventListener/ORM/TablePrefixEventListener.php
 
 		-
-			message: "#^Parameter \\#3 \\$definition of method Nucleos\\\\Doctrine\\\\EventListener\\\\ORM\\\\TablePrefixEventListener\\:\\:addSequenceGenerator\\(\\) expects array, array\\<string, mixed\\>\\|null given\\.$#"
+			message: "#^Parameter \\#2 \\$mapping of method Nucleos\\\\Doctrine\\\\EventListener\\\\ORM\\\\TablePrefixEventListener\\:\\:evaluteMapping\\(\\) expects array, Doctrine\\\\ORM\\\\Mapping\\\\AssociationMapping given\\.$#"
 			count: 1
 			path: src/EventListener/ORM/TablePrefixEventListener.php
 
 		-
-			message: "#^Strict comparison using \\=\\=\\= between null and ReflectionClass\\<object\\> will always evaluate to false\\.$#"
+			message: "#^Parameter \\#3 \\$definition of method Nucleos\\\\Doctrine\\\\EventListener\\\\ORM\\\\TablePrefixEventListener\\:\\:addSequenceGenerator\\(\\) expects array\\{allocationSize\\: int\\}, array\\{sequenceName\\: string, allocationSize\\: string, initialValue\\: string, quoted\\?\\: mixed\\}\\|array\\{sequenceName\\: string\\}\\|null given\\.$#"
 			count: 1
-			path: src/EventListener/ORM/UniqueActiveListener.php
-
-		-
-			message: "#^Call to function method_exists\\(\\) with Doctrine\\\\DBAL\\\\Connection and 'createSchemaManager' will always evaluate to true\\.$#"
-			count: 1
-			path: src/Migration/IdToUuidMigration.php
+			path: src/EventListener/ORM/TablePrefixEventListener.php
 
 		-
 			message: "#^Property Nucleos\\\\Doctrine\\\\Migration\\\\IdToUuidMigration\\:\\:\\$schemaManager with generic class Doctrine\\\\DBAL\\\\Schema\\\\AbstractSchemaManager does not specify its types\\: T$#"
@@ -61,72 +31,31 @@ parameters:
 			path: src/Migration/IdToUuidMigration.php
 
 		-
-			message: "#^Method Nucleos\\\\Doctrine\\\\Tests\\\\Bridge\\\\Symfony\\\\App\\\\AppKernel\\:\\:configureContainer\\(\\) has parameter \\$container with no type specified\\.$#"
-			count: 1
-			path: tests/Bridge/Symfony/App/AppKernel.php
+			message: "#^Call to method method\\(\\) on an unknown class Doctrine\\\\ORM\\\\Mapping\\\\ClassMetadataInfo\\.$#"
+			count: 4
+			path: src/Test/ORM/EntityManagerMockFactory.php
 
 		-
-			message: "#^Method Nucleos\\\\Doctrine\\\\Tests\\\\Bridge\\\\Symfony\\\\App\\\\AppKernel\\:\\:configureContainer\\(\\) has parameter \\$loader with no type specified\\.$#"
+			message: "#^Class Doctrine\\\\ORM\\\\Mapping\\\\ClassMetadataInfo not found\\.$#"
 			count: 1
-			path: tests/Bridge/Symfony/App/AppKernel.php
+			path: src/Test/ORM/EntityManagerMockFactory.php
 
 		-
-			message: "#^Method Nucleos\\\\Doctrine\\\\Tests\\\\Bridge\\\\Symfony\\\\App\\\\AppKernel\\:\\:configureRoutes\\(\\) has parameter \\$routes with no type specified\\.$#"
+			message: "#^Trying to mock an undefined method getFieldNames\\(\\) on class Doctrine\\\\ORM\\\\Mapping\\\\ClassMetadataInfo\\.$#"
 			count: 1
-			path: tests/Bridge/Symfony/App/AppKernel.php
+			path: src/Test/ORM/EntityManagerMockFactory.php
 
 		-
-			message: "#^Call to method getResponse\\(\\) on an unknown class Symfony\\\\Component\\\\HttpKernel\\\\Client\\.$#"
+			message: "#^Trying to mock an undefined method getIdentifier\\(\\) on class Doctrine\\\\ORM\\\\Mapping\\\\ClassMetadataInfo\\.$#"
 			count: 1
-			path: tests/Bridge/Symfony/Bundle/BundleIntegrationTest.php
+			path: src/Test/ORM/EntityManagerMockFactory.php
 
 		-
-			message: "#^Call to method request\\(\\) on an unknown class Symfony\\\\Component\\\\HttpKernel\\\\Client\\.$#"
+			message: "#^Trying to mock an undefined method getName\\(\\) on class Doctrine\\\\ORM\\\\Mapping\\\\ClassMetadataInfo\\.$#"
 			count: 1
-			path: tests/Bridge/Symfony/Bundle/BundleIntegrationTest.php
+			path: src/Test/ORM/EntityManagerMockFactory.php
 
 		-
-			message: "#^Instantiated class Symfony\\\\Component\\\\HttpKernel\\\\Client not found\\.$#"
+			message: "#^Trying to mock an undefined method getTableName\\(\\) on class Doctrine\\\\ORM\\\\Mapping\\\\ClassMetadataInfo\\.$#"
 			count: 1
-			path: tests/Bridge/Symfony/Bundle/BundleIntegrationTest.php
-
-		-
-			message: "#^Dynamic call to static method PHPUnit\\\\Framework\\\\TestCase\\:\\:createStub\\(\\)\\.$#"
-			count: 2
-			path: tests/EventListener/ORM/LifecycleDateListenerTest.php
-
-		-
-			message: "#^Call to function assert\\(\\) with true will always evaluate to true\\.$#"
-			count: 1
-			path: tests/Fixtures/DemoEntityManager.php
-
-		-
-			message: "#^Instanceof between Doctrine\\\\ORM\\\\EntityRepository\\<object\\> and Doctrine\\\\ORM\\\\EntityRepository will always evaluate to true\\.$#"
-			count: 1
-			path: tests/Fixtures/DemoEntityManager.php
-
-		-
-			message: "#^Method Nucleos\\\\Doctrine\\\\Tests\\\\Fixtures\\\\DemoEntityManager\\:\\:addOrderToQueryBuilder\\(\\) has parameter \\$aliasMapping with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: tests/Fixtures/DemoEntityManager.php
-
-		-
-			message: "#^Method Nucleos\\\\Doctrine\\\\Tests\\\\Fixtures\\\\DemoEntityManager\\:\\:addOrderToQueryBuilder\\(\\) has parameter \\$sort with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: tests/Fixtures/DemoEntityManager.php
-
-		-
-			message: "#^Method Nucleos\\\\Doctrine\\\\Tests\\\\Fixtures\\\\DemoEntityManager\\:\\:searchWhereQueryBuilder\\(\\) has parameter \\$values with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: tests/Fixtures/DemoEntityManager.php
-
-		-
-			message: "#^Only booleans are allowed in a negated boolean, Doctrine\\\\Persistence\\\\ObjectManager\\|null given\\.$#"
-			count: 1
-			path: tests/Fixtures/DemoEntityManager.php
-
-		-
-			message: "#^Call to function method_exists\\(\\) with Doctrine\\\\DBAL\\\\Connection and 'createSchemaManager' will always evaluate to true\\.$#"
-			count: 1
-			path: tests/Migration/IdToUuidMigrationTest.php
-
+			path: src/Test/ORM/EntityManagerMockFactory.php
