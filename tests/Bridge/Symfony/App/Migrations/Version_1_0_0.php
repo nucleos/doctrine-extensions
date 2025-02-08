@@ -106,7 +106,7 @@ final class Version_1_0_0 extends AbstractMigration
     }
 
     /**
-     * @SuppressWarnings(PHPMD.ExcessiveMethodLength)
+     * @SuppressWarnings("PHPMD.ExcessiveMethodLength")
      */
     private function createMenu(Schema $schema): void
     {

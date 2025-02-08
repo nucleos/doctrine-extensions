@@ -110,7 +110,7 @@ final class IdToUuidMigration implements LoggerAwareInterface
     }
 
     /**
-     * @SuppressWarnings(PHPMD.NPathComplexity)
+     * @SuppressWarnings("PHPMD.NPathComplexity")
      */
     private function findForeignKeys(): void
     {
@@ -257,7 +257,7 @@ final class IdToUuidMigration implements LoggerAwareInterface
     }
 
     /**
-     * @SuppressWarnings(PHPMD.NPathComplexity)
+     * @SuppressWarnings("PHPMD.NPathComplexity")
      */
     private function addThoseUuidsToTablesWithFK(): void
     {
