@@ -34,7 +34,7 @@ final class ConfirmableListener extends AbstractListener
 
         $reflClass = $meta->getReflectionClass();
 
-        if (null === $reflClass || !$reflClass->implementsInterface(ConfirmableInterface::class)) {
+        if (!$reflClass->implementsInterface(ConfirmableInterface::class)) {
             return;
         }
 

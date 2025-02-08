@@ -17,7 +17,6 @@ use Doctrine\ORM\Event\LoadClassMetadataEventArgs;
 use Doctrine\ORM\Events;
 use Doctrine\ORM\Id\SequenceGenerator;
 use Doctrine\ORM\Mapping\ClassMetadata;
-use Doctrine\ORM\Mapping\ClassMetadataInfo;
 
 final class TablePrefixEventListener implements EventSubscriber
 {
@@ -107,7 +106,7 @@ final class TablePrefixEventListener implements EventSubscriber
 
     private function evaluteMapping(ClassMetadata $classMetadata, array $mapping, string $fieldName): void
     {
-        if (ClassMetadataInfo::MANY_TO_MANY !== $mapping['type']) {
+        if (ClassMetadata::MANY_TO_MANY !== $mapping['type']) {
             return;
         }
 
@@ -120,6 +119,9 @@ final class TablePrefixEventListener implements EventSubscriber
         }
     }
 
+    /**
+     * @param array{allocationSize: int} $definition
+     */
     private function addSequenceGenerator(ClassMetadata $classMetadata, EntityManagerInterface $em, array $definition): void
     {
         $sequenceGenerator = new SequenceGenerator(
