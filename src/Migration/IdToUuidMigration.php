@@ -13,7 +13,6 @@ namespace Nucleos\Doctrine\Migration;
 
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\Schema\AbstractSchemaManager;
-use Doctrine\DBAL\Schema\Column;
 use Doctrine\DBAL\Schema\Schema;
 use Doctrine\DBAL\Schema\Table;
 use Doctrine\DBAL\Types\Types;
@@ -475,7 +474,6 @@ final class IdToUuidMigration implements LoggerAwareInterface
      */
     private function hasCombinedPrimaryKey(array $foreignKey): bool
     {
-        /** @var Column $key */
         foreach ($foreignKey['primaryKey'] as $key) {
             if ($key === $foreignKey['key']) {
                 return true;
