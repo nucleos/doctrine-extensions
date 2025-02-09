@@ -1,117 +1,140 @@
 parameters:
 	ignoreErrors:
 		-
-			message: "#^Strict comparison using \\=\\=\\= between null and ReflectionClass\\<object\\> will always evaluate to false\\.$#"
+			message: '#^Method Nucleos\\Doctrine\\EventListener\\ORM\\AbstractListener\:\:createDateTimeField\(\) has parameter \$metadata with generic class Doctrine\\ORM\\Mapping\\ClassMetadata but does not specify its types\: T$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/EventListener/ORM/AbstractListener.php
+
+		-
+			message: '#^Strict comparison using \=\=\= between null and ReflectionClass\<object\> will always evaluate to false\.$#'
+			identifier: identical.alwaysFalse
 			count: 1
 			path: src/EventListener/ORM/ConfirmableListener.php
 
 		-
-			message: "#^Strict comparison using \\=\\=\\= between null and ReflectionClass\\<object\\> will always evaluate to false\\.$#"
+			message: '#^Strict comparison using \=\=\= between null and ReflectionClass\<object\> will always evaluate to false\.$#'
+			identifier: identical.alwaysFalse
 			count: 1
 			path: src/EventListener/ORM/DeletableListener.php
 
 		-
-			message: "#^Strict comparison using \\=\\=\\= between null and ReflectionClass\\<object\\> will always evaluate to false\\.$#"
+			message: '#^Strict comparison using \=\=\= between null and ReflectionClass\<object\> will always evaluate to false\.$#'
+			identifier: identical.alwaysFalse
 			count: 1
 			path: src/EventListener/ORM/LifecycleDateListener.php
 
 		-
-			message: "#^Strict comparison using \\=\\=\\= between null and ReflectionClass\\<object\\> will always evaluate to false\\.$#"
+			message: '#^Strict comparison using \=\=\= between null and ReflectionClass\<object\> will always evaluate to false\.$#'
+			identifier: identical.alwaysFalse
 			count: 1
 			path: src/EventListener/ORM/SortableListener.php
 
 		-
-			message: "#^Method Nucleos\\\\Doctrine\\\\EventListener\\\\ORM\\\\TablePrefixEventListener\\:\\:evaluteMapping\\(\\) has parameter \\$mapping with no value type specified in iterable type array\\.$#"
+			message: '#^Method Nucleos\\Doctrine\\EventListener\\ORM\\TablePrefixEventListener\:\:addSequenceGenerator\(\) has parameter \$classMetadata with generic class Doctrine\\ORM\\Mapping\\ClassMetadata but does not specify its types\: T$#'
+			identifier: missingType.generics
 			count: 1
 			path: src/EventListener/ORM/TablePrefixEventListener.php
 
 		-
-			message: "#^Offset 'sequenceName' does not exist on array\\{sequenceName\\: string, allocationSize\\: string, initialValue\\: string, quoted\\?\\: mixed\\}\\|null\\.$#"
+			message: '#^Method Nucleos\\Doctrine\\EventListener\\ORM\\TablePrefixEventListener\:\:addSequencePrefix\(\) has parameter \$classMetadata with generic class Doctrine\\ORM\\Mapping\\ClassMetadata but does not specify its types\: T$#'
+			identifier: missingType.generics
 			count: 1
 			path: src/EventListener/ORM/TablePrefixEventListener.php
 
 		-
-			message: "#^Parameter \\#1 \\$definition of method Doctrine\\\\ORM\\\\Mapping\\\\ClassMetadata\\<object\\>\\:\\:setSequenceGeneratorDefinition\\(\\) expects array\\{sequenceName\\?\\: string, allocationSize\\?\\: int\\|string, initialValue\\?\\: int\\|string, quoted\\?\\: mixed\\}, array\\{sequenceName\\: string, allocationSize\\: string, initialValue\\: string, quoted\\?\\: mixed\\}\\|array\\{sequenceName\\: string\\}\\|null given\\.$#"
+			message: '#^Method Nucleos\\Doctrine\\EventListener\\ORM\\TablePrefixEventListener\:\:addTablePrefix\(\) has parameter \$classMetadata with generic class Doctrine\\ORM\\Mapping\\ClassMetadata but does not specify its types\: T$#'
+			identifier: missingType.generics
 			count: 1
 			path: src/EventListener/ORM/TablePrefixEventListener.php
 
 		-
-			message: "#^Parameter \\#3 \\$definition of method Nucleos\\\\Doctrine\\\\EventListener\\\\ORM\\\\TablePrefixEventListener\\:\\:addSequenceGenerator\\(\\) expects array\\{allocationSize\\: int\\}, array\\{sequenceName\\: string, allocationSize\\: string, initialValue\\: string, quoted\\?\\: mixed\\}\\|array\\{sequenceName\\: string\\}\\|null given\\.$#"
+			message: '#^Method Nucleos\\Doctrine\\EventListener\\ORM\\TablePrefixEventListener\:\:evaluteMapping\(\) has parameter \$classMetadata with generic class Doctrine\\ORM\\Mapping\\ClassMetadata but does not specify its types\: T$#'
+			identifier: missingType.generics
 			count: 1
 			path: src/EventListener/ORM/TablePrefixEventListener.php
 
 		-
-			message: "#^Strict comparison using \\=\\=\\= between null and ReflectionClass\\<object\\> will always evaluate to false\\.$#"
+			message: '#^Method Nucleos\\Doctrine\\EventListener\\ORM\\TablePrefixEventListener\:\:evaluteMapping\(\) has parameter \$mapping with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/EventListener/ORM/TablePrefixEventListener.php
+
+		-
+			message: '#^Method Nucleos\\Doctrine\\EventListener\\ORM\\TablePrefixEventListener\:\:isValidTable\(\) has parameter \$classMetadata with generic class Doctrine\\ORM\\Mapping\\ClassMetadata but does not specify its types\: T$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/EventListener/ORM/TablePrefixEventListener.php
+
+		-
+			message: '#^Offset ''sequenceName'' might not exist on array\{sequenceName\: string, allocationSize\: string, initialValue\: string, quoted\?\: mixed\}\|null\.$#'
+			identifier: offsetAccess.notFound
+			count: 1
+			path: src/EventListener/ORM/TablePrefixEventListener.php
+
+		-
+			message: '#^Parameter \#1 \$definition of method Doctrine\\ORM\\Mapping\\ClassMetadata\<object\>\:\:setSequenceGeneratorDefinition\(\) expects array\{sequenceName\?\: string, allocationSize\?\: int\|string, initialValue\?\: int\|string, quoted\?\: mixed\}, array\{sequenceName\: string, allocationSize\: string, initialValue\: string, quoted\?\: mixed\}\|array\{sequenceName\: string\}\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/EventListener/ORM/TablePrefixEventListener.php
+
+		-
+			message: '#^Parameter \#3 \$definition of method Nucleos\\Doctrine\\EventListener\\ORM\\TablePrefixEventListener\:\:addSequenceGenerator\(\) expects array\{allocationSize\: int\}, array\{sequenceName\: string, allocationSize\: string, initialValue\: string, quoted\?\: mixed\}\|array\{sequenceName\: string\}\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/EventListener/ORM/TablePrefixEventListener.php
+
+		-
+			message: '#^Strict comparison using \=\=\= between null and ReflectionClass\<object\> will always evaluate to false\.$#'
+			identifier: identical.alwaysFalse
 			count: 1
 			path: src/EventListener/ORM/UniqueActiveListener.php
 
 		-
-			message: "#^Property Nucleos\\\\Doctrine\\\\Migration\\\\IdToUuidMigration\\:\\:\\$schemaManager with generic class Doctrine\\\\DBAL\\\\Schema\\\\AbstractSchemaManager does not specify its types\\: T$#"
+			message: '#^Property Nucleos\\Doctrine\\Migration\\IdToUuidMigration\:\:\$schemaManager with generic class Doctrine\\DBAL\\Schema\\AbstractSchemaManager does not specify its types\: T$#'
+			identifier: missingType.generics
 			count: 1
 			path: src/Migration/IdToUuidMigration.php
 
 		-
-			message: "#^Call to method method\\(\\) on an unknown class Doctrine\\\\ORM\\\\Mapping\\\\ClassMetadataInfo\\.$#"
+			message: '#^Call to method method\(\) on an unknown class Doctrine\\ORM\\Mapping\\ClassMetadataInfo\.$#'
+			identifier: class.notFound
 			count: 4
 			path: src/Test/ORM/EntityManagerMockFactory.php
 
 		-
-			message: "#^Call to protected method createMock\\(\\) of class PHPUnit\\\\Framework\\\\TestCase\\.$#"
+			message: '#^Call to protected method createMock\(\) of class PHPUnit\\Framework\\TestCase\.$#'
+			identifier: method.protected
 			count: 1
 			path: src/Test/ORM/EntityManagerMockFactory.php
 
 		-
-			message: "#^Class Doctrine\\\\ORM\\\\Mapping\\\\ClassMetadataInfo not found\\.$#"
+			message: '#^Class Doctrine\\ORM\\Mapping\\ClassMetadataInfo not found\.$#'
+			identifier: class.notFound
 			count: 1
 			path: src/Test/ORM/EntityManagerMockFactory.php
 
 		-
-			message: "#^Trying to mock an undefined method getFieldNames\\(\\) on class Doctrine\\\\ORM\\\\Mapping\\\\ClassMetadataInfo\\.$#"
+			message: '#^Trying to mock an undefined method getFieldNames\(\) on class Doctrine\\ORM\\Mapping\\ClassMetadataInfo\.$#'
+			identifier: phpunit.mockMethod
 			count: 1
 			path: src/Test/ORM/EntityManagerMockFactory.php
 
 		-
-			message: "#^Trying to mock an undefined method getIdentifier\\(\\) on class Doctrine\\\\ORM\\\\Mapping\\\\ClassMetadataInfo\\.$#"
+			message: '#^Trying to mock an undefined method getIdentifier\(\) on class Doctrine\\ORM\\Mapping\\ClassMetadataInfo\.$#'
+			identifier: phpunit.mockMethod
 			count: 1
 			path: src/Test/ORM/EntityManagerMockFactory.php
 
 		-
-			message: "#^Trying to mock an undefined method getName\\(\\) on class Doctrine\\\\ORM\\\\Mapping\\\\ClassMetadataInfo\\.$#"
+			message: '#^Trying to mock an undefined method getName\(\) on class Doctrine\\ORM\\Mapping\\ClassMetadataInfo\.$#'
+			identifier: phpunit.mockMethod
 			count: 1
 			path: src/Test/ORM/EntityManagerMockFactory.php
 
 		-
-			message: "#^Trying to mock an undefined method getTableName\\(\\) on class Doctrine\\\\ORM\\\\Mapping\\\\ClassMetadataInfo\\.$#"
+			message: '#^Trying to mock an undefined method getTableName\(\) on class Doctrine\\ORM\\Mapping\\ClassMetadataInfo\.$#'
+			identifier: phpunit.mockMethod
 			count: 1
 			path: src/Test/ORM/EntityManagerMockFactory.php
-
-		-
-			message: "#^Call to function assert\\(\\) with true will always evaluate to true\\.$#"
-			count: 1
-			path: tests/Fixtures/DemoEntityManager.php
-
-		-
-			message: "#^Instanceof between Doctrine\\\\ORM\\\\EntityRepository\\<object\\> and Doctrine\\\\ORM\\\\EntityRepository will always evaluate to true\\.$#"
-			count: 1
-			path: tests/Fixtures/DemoEntityManager.php
-
-		-
-			message: "#^Method Nucleos\\\\Doctrine\\\\Tests\\\\Fixtures\\\\DemoEntityManager\\:\\:addOrderToQueryBuilder\\(\\) has parameter \\$aliasMapping with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: tests/Fixtures/DemoEntityManager.php
-
-		-
-			message: "#^Method Nucleos\\\\Doctrine\\\\Tests\\\\Fixtures\\\\DemoEntityManager\\:\\:addOrderToQueryBuilder\\(\\) has parameter \\$sort with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: tests/Fixtures/DemoEntityManager.php
-
-		-
-			message: "#^Method Nucleos\\\\Doctrine\\\\Tests\\\\Fixtures\\\\DemoEntityManager\\:\\:searchWhereQueryBuilder\\(\\) has parameter \\$values with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: tests/Fixtures/DemoEntityManager.php
-
-		-
-			message: "#^Only booleans are allowed in a negated boolean, Doctrine\\\\Persistence\\\\ObjectManager\\|null given\\.$#"
-			count: 1
-			path: tests/Fixtures/DemoEntityManager.php
 
