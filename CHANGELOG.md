@@ -2,27 +2,35 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
-## 4.16.0 - TBD
+## 4.16.0 - 2025-02-09
 
-### Added
 
-- Nothing.
+-----
 
-### Changed
+### Release Notes for [4.16.0](https://github.com/nucleos/nucleos-doctrine-extensions/milestone/33)
 
-- Nothing.
+Feature release (minor)
 
-### Deprecated
+### 4.16.0
 
-- Nothing.
+- Total issues resolved: **0**
+- Total pull requests resolved: **6**
+- Total contributors: **2**
 
-### Removed
+#### Bug
 
-- Nothing.
+ - [417: Fix doctrine/orm 3 support](https://github.com/nucleos/nucleos-doctrine-extensions/pull/417) thanks to @core23
 
-### Fixed
+#### Enhancement
 
-- Nothing.
+ - [416: Sync tool config ](https://github.com/nucleos/nucleos-doctrine-extensions/pull/416) thanks to @core23
+ - [415: Remove infection testing ](https://github.com/nucleos/nucleos-doctrine-extensions/pull/415) thanks to @core23
+ - [413: Remove psalm in favor of phpstan ](https://github.com/nucleos/nucleos-doctrine-extensions/pull/413) thanks to @core23
+
+#### dependency
+
+ - [411: Update PHPStan packages to v2 (major)](https://github.com/nucleos/nucleos-doctrine-extensions/pull/411) thanks to @renovate[bot]
+ - [408: Update dependency matthiasnoback/symfony-dependency-injection-test to v6](https://github.com/nucleos/nucleos-doctrine-extensions/pull/408) thanks to @renovate[bot]
 
 ## 4.15.0 - 2024-08-14
 
