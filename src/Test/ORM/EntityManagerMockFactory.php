@@ -16,6 +16,7 @@ use Doctrine\DBAL\Connection;
 use Doctrine\ORM\AbstractQuery;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\Mapping\ClassMetadata;
 use Doctrine\ORM\Mapping\ClassMetadataInfo;
 use Doctrine\ORM\QueryBuilder;
 use PHPUnit\Framework\MockObject\MockObject;
@@ -74,6 +75,10 @@ final class EntityManagerMockFactory
      */
     private static function prepareMetadata(TestCase $test, array $fields): MockObject
     {
+        if (class_exists(EntityManager::class)) {
+            return $test->createMock(ClassMetadata::class);
+        }
+
         $metadata = $test->getMockBuilder(ClassMetadataInfo::class)->disableOriginalConstructor()->getMock();
         $metadata->method('getFieldNames')->willReturn($fields);
         $metadata->method('getName')->willReturn('className');
